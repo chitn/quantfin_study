@@ -26,22 +26,24 @@ ax2.set(xlabel = 'asset return', ylabel = 'probability')
 
 num_bins   = 20
 
-def rand12():
-    rand = random.random() + random.random() + random.random() + \
-           random.random() + random.random() + random.random() + \
-           random.random() + random.random() + random.random() + \
-           random.random() + random.random() + random.random() - 6
-    return rand
 
-def rand6():
-    rand = random.random() + random.random() + random.random() + \
-           random.random() + random.random() + random.random() - 3
-    return rand
+def r6():
+    ans = 0
+    for i in range(6):
+        ans += random.random()
+    ans -= 3
+    return ans
+    
+def rand(numb):
+    if numb == 6:
+        return r6()
+    else:
+        return r6() + r6()
+    
     
 for j in range(0,scenario):
     for i in range(1,step):
-        rand = rand12
-        asset[i] = asset[i-1]*(1 + dt + vt*rand12())    
+        asset[i] = asset[i-1]*(1 + dt + vt*rand(6))    
         areturn[i] = (asset[i] - asset[i-1])/asset[i-1]
         
     ax1.plot(range(0,step), asset)
