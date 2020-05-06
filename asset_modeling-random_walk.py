@@ -1,5 +1,7 @@
-# This code reproduces the random walk model presented in Section 4.8 in Paul Wilmott's book
-# "Introduces to Quantitative finance, 2nd edition".
+"""
+Created on April 28 2020
+The random walk model for return modelling follows Introduces Quantitative Finances of Paul Wilmott.
+"""
 
 import random
 import matplotlib.pyplot as plt
