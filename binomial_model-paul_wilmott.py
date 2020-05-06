@@ -1,8 +1,6 @@
 """
 Created on Tue May  5 09:45:00 2020
-
-Binomial model for European- and American-style exercise
-following Paul Wilmott_Introduces Quantitative Finances
+The binomial model for European- and American-style exercises follows Introduces Quantitative Finances of Paul Wilmott.
 """
 
 import math
