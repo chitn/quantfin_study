@@ -97,6 +97,7 @@ def f_5(x,y):
 
 
 riemann_sum(f=f_4, a=10, b=20, N=1000, method='trapezoid', plotyn=True)
+# riemann_sum(f=f_2, a=0, b=5, N=30, method='left', plotyn=True)
 # riemann_sum(f=f_2, a=0, b=5, N=30, method='right', plotyn=True)
 # riemann_sum(f=f_2, a=0, b=5, N=30, method='midpoint', plotyn=True)
 # riemann_sum(f=f_2, a=0, b=5, N=30, method='trapezoid', plotyn=True)
