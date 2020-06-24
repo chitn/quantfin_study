@@ -17,4 +17,4 @@ Besides the quantitative finance topic, I include here also some supporting know
 - time series analysis with statistical techniques
 - time series analysis with LSTM
 
-I do hope that in the very near future I can successfully move to the finance sector and work as a Quantitative Investment Researcher. 
+I do hope that in the future I can successfully move to the finance sector and work as a Quantitative Investment Researcher. 
