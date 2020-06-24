@@ -1,0 +1,11 @@
+# ignore files created during LaTex compilation
+note.aux
+note.bbl
+note.blg
+note.idx
+note.ilg
+note.ind
+note.log
+note.out
+note.synctex.gz
+note.toc
