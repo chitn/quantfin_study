@@ -1,0 +1,234 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {A}Brief on quantitative finance}{5}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Products and markets}{5}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Equities}{5}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Commodities}{5}{subsection.A.1.2}%
+\contentsline {subsection}{\numberline {A.1.3}Currencies}{5}{subsection.A.1.3}%
+\contentsline {subsection}{\numberline {A.1.4}Indices}{5}{subsection.A.1.4}%
+\contentsline {subsection}{\numberline {A.1.5}The time value of money}{6}{subsection.A.1.5}%
+\contentsline {subsection}{\numberline {A.1.6}Fixed-income securities}{6}{subsection.A.1.6}%
+\contentsline {subsection}{\numberline {A.1.7}Forwards and futures}{7}{subsection.A.1.7}%
+\contentsline {section}{\numberline {A.2}Derivatives}{9}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}Options}{9}{subsection.A.2.1}%
+\contentsline {subsection}{\numberline {A.2.2}The value of the option}{10}{subsection.A.2.2}%
+\contentsline {subsection}{\numberline {A.2.3}Speculation and gearing}{10}{subsection.A.2.3}%
+\contentsline {subsection}{\numberline {A.2.4}Option strategies}{10}{subsection.A.2.4}%
+\contentsline {subsubsection}{Single-option}{10}{section*.2}%
+\contentsline {subsubsection}{Put-Call parity}{11}{section*.3}%
+\contentsline {subsubsection}{Multiple-option}{11}{section*.4}%
+\contentsline {subsubsection}{Miscellaneous}{11}{section*.5}%
+\contentsline {section}{\numberline {A.3}The binomial model}{11}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}Introduction}{11}{subsection.A.3.1}%
+\contentsline {subsection}{\numberline {A.3.2}Risk-neutrality}{12}{subsection.A.3.2}%
+\contentsline {subsection}{\numberline {A.3.3}The binomial tree}{13}{subsection.A.3.3}%
+\contentsline {subsection}{\numberline {A.3.4}Miscellaneous}{14}{subsection.A.3.4}%
+\contentsline {section}{\numberline {A.4}Random behavior of assets}{15}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Jensen's inequality}{15}{subsection.A.4.1}%
+\contentsline {subsection}{\numberline {A.4.2}Returns}{15}{subsection.A.4.2}%
+\contentsline {chapter}{\numberline {B}Basic financial simulation I}{17}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Returns modeling}{17}{section.B.1}%
+\contentsline {subsection}{\numberline {B.1.1}Discrete-time model}{18}{subsection.B.1.1}%
+\contentsline {subsection}{\numberline {B.1.2}Continuous-time model}{19}{subsection.B.1.2}%
+\contentsline {section}{\numberline {B.2}Elementary stochastic calculus}{20}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Introduction}{20}{subsection.B.2.1}%
+\contentsline {subsection}{\numberline {B.2.2}Brownian motion}{21}{subsection.B.2.2}%
+\contentsline {subsection}{\numberline {B.2.3}Stochastic integration and differentiation}{22}{subsection.B.2.3}%
+\contentsline {subsubsection}{Itô's lemma}{22}{section*.9}%
+\contentsline {subsubsection}{Itô in higher dimensions}{24}{section*.10}%
+\contentsline {subsection}{\numberline {B.2.4}Some common random walks}{25}{subsection.B.2.4}%
+\contentsline {subsubsection}{Brownian motion with drift}{25}{section*.11}%
+\contentsline {subsubsection}{The lognormal random walk}{25}{section*.12}%
+\contentsline {subsubsection}{A mean-reverting random walk}{25}{section*.13}%
+\contentsline {subsection}{\numberline {B.2.5}Summary}{25}{subsection.B.2.5}%
+\contentsline {subsection}{\numberline {B.2.6}Exercises}{26}{subsection.B.2.6}%
+\contentsline {subsubsection}{Problem}{26}{section*.14}%
+\contentsline {subsubsection}{Problem}{26}{section*.15}%
+\contentsline {subsubsection}{Problem}{26}{section*.16}%
+\contentsline {subsubsection}{Problem}{26}{section*.17}%
+\contentsline {subsubsection}{Problem}{27}{section*.18}%
+\contentsline {subsubsection}{Problem}{27}{section*.19}%
+\contentsline {subsubsection}{Problem}{27}{section*.20}%
+\contentsline {section}{\numberline {B.3}Black-Scholes model}{27}{section.B.3}%
+\contentsline {subsection}{\numberline {B.3.1}Black-Scholes equation}{27}{subsection.B.3.1}%
+\contentsline {subsubsection}{A portfolio}{27}{section*.21}%
+\contentsline {subsubsection}{Delta hedging}{28}{section*.22}%
+\contentsline {subsubsection}{No arbitrage}{28}{section*.23}%
+\contentsline {subsubsection}{Black-Scholes equation}{29}{section*.24}%
+\contentsline {subsection}{\numberline {B.3.2}Initial/final and boundary conditions}{29}{subsection.B.3.2}%
+\contentsline {subsection}{\numberline {B.3.3}Some other ways of deriving Black-Scholes equation}{30}{subsection.B.3.3}%
+\contentsline {subsection}{\numberline {B.3.4}Forward and future contracts}{30}{subsection.B.3.4}%
+\contentsline {subsubsection}{Forward contracts}{30}{section*.25}%
+\contentsline {subsubsection}{Future contracts}{31}{section*.26}%
+\contentsline {subsection}{\numberline {B.3.5}Some popular options}{32}{subsection.B.3.5}%
+\contentsline {subsubsection}{Option on dividend-paying equities}{32}{section*.27}%
+\contentsline {subsubsection}{Currency options}{32}{section*.28}%
+\contentsline {subsection}{\numberline {B.3.6}Main solution methods}{32}{subsection.B.3.6}%
+\contentsline {subsection}{\numberline {B.3.7}Exercises}{32}{subsection.B.3.7}%
+\contentsline {subsubsection}{Problem}{33}{section*.29}%
+\contentsline {subsubsection}{Problem}{33}{section*.30}%
+\contentsline {subsubsection}{Problem}{33}{section*.31}%
+\contentsline {subsubsection}{Problem}{33}{section*.32}%
+\contentsline {subsubsection}{Problem}{33}{section*.33}%
+\contentsline {subsubsection}{Problem}{33}{section*.34}%
+\contentsline {subsubsection}{Problem}{34}{section*.35}%
+\contentsline {subsubsection}{Problem}{34}{section*.36}%
+\contentsline {subsubsection}{Problem}{34}{section*.37}%
+\contentsline {subsubsection}{Problem}{34}{section*.38}%
+\contentsline {subsubsection}{Problem}{34}{section*.39}%
+\contentsline {subsubsection}{Problem}{35}{section*.40}%
+\contentsline {section}{\numberline {B.4}Black-Scholes formul{\ae } and Greeks}{35}{section.B.4}%
+\contentsline {subsection}{\numberline {B.4.1}Derivation for calls, puts and simple digitals}{35}{subsection.B.4.1}%
+\contentsline {subsubsection}{Formula for a call}{37}{section*.41}%
+\contentsline {subsubsection}{Formula for a put}{38}{section*.42}%
+\contentsline {subsubsection}{Formula for a binary call}{39}{section*.44}%
+\contentsline {subsubsection}{Formula for a binary put}{39}{section*.45}%
+\contentsline {subsection}{\numberline {B.4.2}Greeks}{39}{subsection.B.4.2}%
+\contentsline {subsubsection}{Delta}{39}{section*.46}%
+\contentsline {subsubsection}{Gamma}{40}{section*.47}%
+\contentsline {subsubsection}{Theta}{40}{section*.48}%
+\contentsline {subsubsection}{Speed}{41}{section*.49}%
+\contentsline {subsubsection}{Vega}{41}{section*.50}%
+\contentsline {subsubsection}{Rho}{42}{section*.51}%
+\contentsline {subsection}{\numberline {B.4.3}Implied volatility}{42}{subsection.B.4.3}%
+\contentsline {subsection}{\numberline {B.4.4}Short introduction into volatility modelling}{43}{subsection.B.4.4}%
+\contentsline {subsubsection}{Constant volatility/moving window}{43}{section*.52}%
+\contentsline {subsubsection}{Incorporating mean reversion}{43}{section*.53}%
+\contentsline {subsubsection}{Exponentially weighted moving average}{44}{section*.54}%
+\contentsline {subsubsection}{A simple GRACH model}{44}{section*.56}%
+\contentsline {subsubsection}{Range-based estimation of volatility}{44}{section*.57}%
+\contentsline {paragraph}{Traditional close-to-close measure}{45}{section*.58}%
+\contentsline {paragraph}{Parkinson 1980}{45}{section*.59}%
+\contentsline {paragraph}{Garman \& Klass 1980}{45}{section*.60}%
+\contentsline {paragraph}{Rogers \& Satchell 1991}{45}{section*.61}%
+\contentsline {section}{\numberline {B.5}FDM solutions for Black-Scholes equation (one-factor model)}{45}{section.B.5}%
+\contentsline {subsection}{\numberline {B.5.1}Introduction}{45}{subsection.B.5.1}%
+\contentsline {subsection}{\numberline {B.5.2}Differentiation using the grid}{45}{subsection.B.5.2}%
+\contentsline {subsection}{\numberline {B.5.3}Approximating Greeks}{45}{subsection.B.5.3}%
+\contentsline {subsection}{\numberline {B.5.4}Boundary conditions and payoffs}{45}{subsection.B.5.4}%
+\contentsline {subsection}{\numberline {B.5.5}Explicit method}{45}{subsection.B.5.5}%
+\contentsline {subsubsection}{Black-Scholes equation}{45}{section*.62}%
+\contentsline {subsubsection}{Convergence}{46}{section*.63}%
+\contentsline {subsubsection}{European option}{46}{section*.64}%
+\contentsline {subsubsection}{American option}{46}{section*.65}%
+\contentsline {subsubsection}{Runge-Kutta method}{46}{section*.66}%
+\contentsline {subsection}{\numberline {B.5.6}Implicit method}{46}{subsection.B.5.6}%
+\contentsline {subsubsection}{Crank-Nicolson method}{46}{section*.67}%
+\contentsline {section}{\numberline {B.6}Binomial model}{46}{section.B.6}%
+\contentsline {subsection}{\numberline {B.6.1}Initiation}{46}{subsection.B.6.1}%
+\contentsline {subsection}{\numberline {B.6.2}Value of an option}{47}{subsection.B.6.2}%
+\contentsline {subsubsection}{Hedging}{47}{section*.68}%
+\contentsline {subsubsection}{No arbitrage}{48}{section*.69}%
+\contentsline {subsubsection}{Binomial tree}{48}{section*.70}%
+\contentsline {subsubsection}{The Greeks}{49}{section*.73}%
+\contentsline {subsection}{\numberline {B.6.3}Implementation}{50}{subsection.B.6.3}%
+\contentsline {subsubsection}{$(u,v,p)$ to $(\mu ,\sigma )$}{50}{section*.74}%
+\contentsline {subsubsection}{Data structures}{52}{section*.76}%
+\contentsline {subsubsection}{Payoff function}{52}{section*.77}%
+\contentsline {subsubsection}{Implementation}{52}{section*.78}%
+\contentsline {subsubsection}{Dividend yields}{53}{section*.80}%
+\contentsline {subsection}{\numberline {B.6.4}Continuous-time limit}{54}{subsection.B.6.4}%
+\contentsline {subsection}{\numberline {B.6.5}Miscellaneous \leavevmode {\color {red}[FUTURE]}}{54}{subsection.B.6.5}%
+\contentsline {section}{\numberline {B.7}Monte-Carlo solution for Geometric Brownian motion}{54}{section.B.7}%
+\contentsline {section}{\numberline {B.8}A trading game}{54}{section.B.8}%
+\contentsline {chapter}{\numberline {C}Basic financial simulation II}{55}{appendix.C}%
+\contentsline {section}{\numberline {C.1}Time series analysis}{55}{section.C.1}%
+\contentsline {section}{\numberline {C.2}Statistical techniques}{55}{section.C.2}%
+\contentsline {section}{\numberline {C.3}Machine learning techniques}{55}{section.C.3}%
+\contentsline {chapter}{\numberline {D}Basic financial simulation III}{56}{appendix.D}%
+\contentsline {section}{\numberline {D.1}Volatility modelling}{56}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}Different types of volatility}{56}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}To be continued}{57}{subsection.D.1.2}%
+\contentsline {section}{\numberline {D.2}Delta hedging}{57}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}Classification of hedging strategies}{57}{subsection.D.2.1}%
+\contentsline {subsubsection}{Two main classifications}{57}{section*.81}%
+\contentsline {paragraph}{Model-independent hedging}{57}{section*.82}%
+\contentsline {paragraph}{Model-dependent hedging}{57}{section*.83}%
+\contentsline {subsubsection}{To be continued}{57}{section*.84}%
+\contentsline {subsection}{\numberline {D.2.2}To be continued}{57}{subsection.D.2.2}%
+\contentsline {section}{\numberline {D.3}Not yet covered}{58}{section.D.3}%
+\contentsline {chapter}{\numberline {E}Intermediate financial simulation}{59}{appendix.E}%
+\contentsline {chapter}{\numberline {F}Advanced financial simulation}{60}{appendix.F}%
+\contentsline {chapter}{\numberline {G}Mathematical tools for finance}{61}{appendix.G}%
+\contentsline {section}{\numberline {G.1}Probability}{61}{section.G.1}%
+\contentsline {subsection}{\numberline {G.1.1}Set theory}{61}{subsection.G.1.1}%
+\contentsline {subsection}{\numberline {G.1.2}Permutation and Combination}{61}{subsection.G.1.2}%
+\contentsline {subsection}{\numberline {G.1.3}Probability}{61}{subsection.G.1.3}%
+\contentsline {subsubsection}{Basic}{61}{section*.85}%
+\contentsline {subsubsection}{Conditional probability and Bayes’s formula}{61}{section*.86}%
+\contentsline {subsection}{\numberline {G.1.4}Random variables}{61}{subsection.G.1.4}%
+\contentsline {subsubsection}{Basis}{61}{section*.87}%
+\contentsline {subsubsection}{Properties}{61}{section*.88}%
+\contentsline {subsection}{\numberline {G.1.5}Discrete random variables}{61}{subsection.G.1.5}%
+\contentsline {subsubsection}{Basis}{61}{section*.89}%
+\contentsline {subsubsection}{Uniform discrete random variable}{61}{section*.90}%
+\contentsline {subsubsection}{Binomial random variable}{61}{section*.91}%
+\contentsline {subsubsection}{Geometric random variable}{62}{section*.92}%
+\contentsline {subsubsection}{Negative binomial random variable}{62}{section*.93}%
+\contentsline {subsubsection}{Hyper-geometric random variable}{62}{section*.94}%
+\contentsline {subsubsection}{Poisson random variable}{62}{section*.95}%
+\contentsline {subsection}{\numberline {G.1.6}Continuous random variables}{62}{subsection.G.1.6}%
+\contentsline {subsubsection}{Basis}{62}{section*.96}%
+\contentsline {subsubsection}{Expected value}{62}{section*.97}%
+\contentsline {subsubsection}{Cumulative distribution function (cdf)}{62}{section*.98}%
+\contentsline {subsubsection}{Probability density function (pdf)}{62}{section*.99}%
+\contentsline {subsubsection}{Continuous uniform distribution function}{62}{section*.100}%
+\contentsline {subsubsection}{Normal random variable}{62}{section*.101}%
+\contentsline {subsubsection}{Exponential random variable}{63}{section*.102}%
+\contentsline {subsubsection}{Gamma distribution}{63}{section*.103}%
+\contentsline {subsection}{\numberline {G.1.7}Relationship between random variables}{63}{subsection.G.1.7}%
+\contentsline {subsubsection}{Basis}{63}{section*.104}%
+\contentsline {subsubsection}{Independent random variables}{63}{section*.105}%
+\contentsline {subsubsection}{Conditional distribution}{63}{section*.106}%
+\contentsline {subsubsection}{Joint pdf of functions}{63}{section*.107}%
+\contentsline {subsubsection}{Expected value of a function}{63}{section*.108}%
+\contentsline {subsubsection}{Covariance}{63}{section*.109}%
+\contentsline {subsubsection}{Coefficient of correlation}{63}{section*.110}%
+\contentsline {subsection}{\numberline {G.1.8}Miscellaneous}{63}{subsection.G.1.8}%
+\contentsline {subsubsection}{Central tendency}{63}{section*.111}%
+\contentsline {subsubsection}{Moment generating functions}{63}{section*.112}%
+\contentsline {subsubsection}{Central limit theorem}{63}{section*.113}%
+\contentsline {subsubsection}{Special series}{63}{section*.114}%
+\contentsline {section}{\numberline {G.2}Stochastic processes}{64}{section.G.2}%
+\contentsline {subsection}{\numberline {G.2.1}Basic}{64}{subsection.G.2.1}%
+\contentsline {subsection}{\numberline {G.2.2}Bernoulli stochastic process}{64}{subsection.G.2.2}%
+\contentsline {subsection}{\numberline {G.2.3}Poisson stochastic process}{64}{subsection.G.2.3}%
+\contentsline {subsection}{\numberline {G.2.4}Discrete-time Markov chains}{64}{subsection.G.2.4}%
+\contentsline {subsubsection}{Discrete-time Markov chains}{64}{section*.115}%
+\contentsline {subsubsection}{Classification of states}{64}{section*.116}%
+\contentsline {subsubsection}{Steady-state behavior}{64}{section*.117}%
+\contentsline {subsubsection}{Absorption probabilities and expected time to absorption}{64}{section*.118}%
+\contentsline {subsubsection}{Random walk models}{64}{section*.119}%
+\contentsline {subsection}{\numberline {G.2.5}Continuous-time Markov chains}{64}{subsection.G.2.5}%
+\contentsline {subsubsection}{Continuous-time Markov chains}{64}{section*.120}%
+\contentsline {subsubsection}{Brownian motion}{64}{section*.121}%
+\contentsline {subsubsection}{Birth-Death process}{64}{section*.122}%
+\contentsline {section}{\numberline {G.3}Statistics}{64}{section.G.3}%
+\contentsline {section}{\numberline {G.4}General numerical methods}{65}{section.G.4}%
+\contentsline {subsection}{\numberline {G.4.1}Polynomial approximation}{65}{subsection.G.4.1}%
+\contentsline {subsubsection}{Linear and quadratic approximation}{65}{section*.123}%
+\contentsline {subsubsection}{Higher-order approximation}{65}{section*.124}%
+\contentsline {subsubsection}{Residual}{66}{section*.125}%
+\contentsline {subsubsection}{Multivariate Taylor series}{66}{section*.126}%
+\contentsline {subsection}{\numberline {G.4.2}Polynomial interpolation}{67}{subsection.G.4.2}%
+\contentsline {subsection}{\numberline {G.4.3}Numerical integration}{68}{subsection.G.4.3}%
+\contentsline {subsubsection}{Definite integrals}{68}{section*.127}%
+\contentsline {subsubsection}{Riemann sums}{68}{section*.128}%
+\contentsline {subsubsection}{Newton-Cotes formulas}{70}{section*.130}%
+\contentsline {subsubsection}{Monte-Carlo integration}{71}{section*.132}%
+\contentsline {subsection}{\numberline {G.4.4}Numerical differentiation}{74}{subsection.G.4.4}%
+\contentsline {subsubsection}{Derivative and differentiation}{74}{section*.134}%
+\contentsline {subsubsection}{First derivative}{74}{section*.135}%
+\contentsline {subsubsection}{Higher derivative}{75}{section*.136}%
+\contentsline {subsubsection}{Partial derivatives}{75}{section*.137}%
+\contentsline {subsection}{\numberline {G.4.5}Root finding}{76}{subsection.G.4.5}%
+\contentsline {subsubsection}{Bisection method}{77}{section*.139}%
+\contentsline {subsubsection}{Newton-Raphson method}{77}{section*.140}%
+\contentsline {subsubsection}{Secant method}{78}{section*.141}%
+\contentsline {section}{\numberline {G.5}Finite difference method}{79}{section.G.5}%
+\contentsline {subsection}{\numberline {G.5.1}Introduction}{79}{subsection.G.5.1}%
+\contentsline {subsection}{\numberline {G.5.2}Explicit}{79}{subsection.G.5.2}%
+\contentsline {subsection}{\numberline {G.5.3}Implicit}{79}{subsection.G.5.3}%
+\contentsline {subsection}{\numberline {G.5.4}Crank-Nicolson}{79}{subsection.G.5.4}%
+\contentsline {section}{\numberline {G.6}Optimization}{79}{section.G.6}%
+\contentsline {subsection}{\numberline {G.6.1}Unconstrained optimization}{79}{subsection.G.6.1}%
+\contentsline {subsection}{\numberline {G.6.2}Constrained optimization}{79}{subsection.G.6.2}%

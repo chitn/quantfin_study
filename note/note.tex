@@ -1,0 +1,61 @@
+\documentclass[11pt,a4paper]{report}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{hyperref}
+\usepackage{pythonhighlight}
+\usepackage{enumitem} 
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage[linesnumbered,lined,ruled]{algorithm2e}
+\usepackage{subfiles}
+\usepackage{imakeidx}
+\makeindex
+
+\hypersetup{
+    colorlinks = true,
+    linkcolor  = blue,
+    filecolor  = magenta,      
+    urlcolor   = magenta
+}
+\renewcommand{\labelitemii}{$\star$}
+\SetEndCharOfAlgoLine{}
+\SetAlFnt{\footnotesize\ttfamily}
+
+
+\begin{document}
+\title{Study on Quantitative finance}
+\author{Chi Thanh Nguyen}
+\date{\today \@ \currenttime}
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Introduction}
+This is my study note on the subject of Quantitative Finance based mainly on the book \cite{pw_iqf2ed_2007}. I do hope that in the very near future I can successfully move to the finance sector and work as a Quantitative Investment Researcher. 
+
+
+\appendix 
+\input{tex/brief_qf.tex}
+\input{tex/fin_basic_1.tex}
+\input{tex/fin_basic_2.tex}
+\input{tex/fin_basic_3.tex}
+\input{tex/fin_inter.tex}
+\input{tex/fin_adv.tex}
+\input{tex/math4fin.tex}
+
+
+\printindex
+
+\bibliographystyle{unsrt}
+\bibliography{bib_quant}
+
+\end{document}

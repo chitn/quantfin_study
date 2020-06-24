@@ -1,0 +1,110 @@
+\chapter{Basic financial simulation III}
+\section{Volatility modelling}
+\label{sec:volatility_modelling}
+In general, the Black–Scholes model is very robust and does a decent job of pricing derivatives. One of the most important flaws in the model concerns the behavior of volatility. In fact, we do not know what volatility currently is as well as what it may be in the future; whereas the correct pricing of derivatives requires us to know what the volatility is going to be. For this reason, volatility analysis and modeling takes a prominent role in financial simulation.
+
+
+\subsection{Different types of volatility}
+Volatility is difficult to estimate, the best we can hope to do is to measure it statistically. But such a measure is necessarily backwards looking, and we really want to know what volatility is going to be in the future. There are a few types of volatility:
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Actual volatility
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item This is the measure of the amount of randomness in an asset return at any particular time. It is very difficult to measure, but is supposed to be an input into all option pricing models. In particular, the actual (or `local') volatility goes into the Black–Scholes equation.
+		\item There is no `timescale' associated with actual volatility, it is a quantity that exists at each instant, possibly varying from moment to moment.
+		\item Example: the actual volatility is now 20\%... now it is 22.5\%...
+	\end{itemize}
+	\item Historical or realized volatility
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item This is a measure of the amount of randomness over some period in the past. The period is always specified, and so is the mathematical method for its calculation. Sometimes this backward-looking measure is used as an estimate for what volatility will be in the future. In pricing an option we are making an estimate of what actual volatility will be over the lifetime of the option. After the option has expired we can go back and calculate what the volatility actually was over the life of the option. This is the realized volatility.
+		\item There are two `timescales' associated with historical or realized volatility: one short and one long.
+		\item Example: The 60-day volatility using daily returns. Perhaps of interest if you are pricing a 60-day option, which you are hedging daily.
+	\end{itemize}
+	\item Implied volatility
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item The implied volatility is the volatility which when input into the Black–Scholes option pricing formul{\ae} gives the market price of the option. It is often described as the market's view of the future actual volatility over the lifetime of the particular option. However, it is also influenced by other effects such as supply and demand.
+		\item There is one `timescale' associated with implied volatility: expiration.
+	\end{itemize}
+	\item Forward volatility
+	\begin{itemize}
+		\setlength\itemsep{0em}
+		\item The adjective `forward' can be applied to many forms of volatility, and refers to the volatility (whether actual or implied) over some period in the future.
+		\item Forward volatility is associated with either a time period, or a future instant.
+	\end{itemize}
+\end{itemize}
+
+
+
+\subsection{To be continued}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Volatility estimation by statistical means
+	\item Maximum likelihood estimation
+	\item Different approaches to modelling volatility
+\end{itemize}
+
+
+
+\section{Delta hedging}
+
+\subsection{Classification of hedging strategies}
+`Hedging' in its broadest sense means the reduction of risk by exploiting relationships or correlation between various risky investments. The reason for hedging is that it can lead to an improved risk/return. 
+
+
+\subsubsection{Two main classifications}
+Probably the most important distinction between types of hedging is between model-independent and model-dependent hedging strategies.
+
+\paragraph{Model-independent hedging}
+An example of such hedging is put-call parity. There is a simple relationship between calls and puts on an asset (when they are both European and with the same strikes and expiries), the underlying stock and a zero-coupon bond with the same maturity. This relationship is completely independent of how the underlying asset changes in value.
+
+\paragraph{Model-dependent hedging}
+Most sophisticated finance hedging strategies depend on a model for the underlying asset. The obvious example is the hedging used in the Black–Scholes analysis that leads to a whole theory for the value of derivatives. In pricing derivatives we typically need to at least know the volatility of the underlying asset.
+
+
+\subsubsection{To be continued}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Delta hedging
+	\item Gamma hedging
+	\item Vega hedging
+	\item Static hedging
+	\item Margin hedging
+	\item Crash (Platinum) hedging
+\end{itemize}
+
+
+
+\subsection{To be continued}
+\begin{itemize}
+	\setlength\itemsep{0em}
+	\item Implied versus actual volatilities
+	\item Hedge with actual volatility
+	\item Hedge with implied volatility
+	\item Hedge with different volatilities
+	\item Pros and cons of hedging with each volatility
+	\item How does implied volatility behave
+\end{itemize}
+
+
+
+\section{Not yet covered}
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Multi-asset options
+    \begin{itemize}
+		\setlength\itemsep{0em}
+		\item Multidimensional lognormal random walk
+		\item Measuring correlations
+		\item Options of many underlying
+		\item And many more
+	\end{itemize}
+    \item Exotic and path-dependent options
+    \item Barrier options
+    \item Fixed-income products
+    \item Swaps
+    \item One-factor interest rate modeling
+    \item Interest rate derivatives
+\end{itemize}

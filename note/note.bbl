@@ -1,0 +1,81 @@
+\begin{thebibliography}{10}
+
+\bibitem{pw_iqf2ed_2007}
+Paul Wilmott.
+\newblock {\em Introduces Quantitative Finance}.
+\newblock John Wiley \& Sons Ltd, 2007.
+
+\bibitem{ch_ofd9ed_2015}
+John~C. Hull.
+\newblock {\em Options, futures, and other derivatives}.
+\newblock Pearson, 2015.
+
+\bibitem{cox_optionpricing_1979}
+J.C. Cox, S.~Ross, and M.~Rubinstein.
+\newblock Option pricing: a simplified approach.
+\newblock {\em Journal of Financial Economics}, 7:229--263, 1979.
+
+\bibitem{pw_poqf2ed_2006}
+Paul Wilmott.
+\newblock {\em Paul Wilmott on Quantitative Finance}.
+\newblock John Wiley \& Sons Ltd, 2006.
+
+\bibitem{pw_optionpricing_1994}
+Paul Wilmott, Jeff Dewynne, and Sam Howison.
+\newblock {\em Option pricing: Mathematical models and computation}.
+\newblock Oxford Financial Press, 1994.
+
+\bibitem{pw_mathfinderiv_1995}
+Paul Wilmott, Sam Howison, and Jeff Dewynne.
+\newblock {\em The mathematics of financial derivatives}.
+\newblock Cambridge University Press, 1995.
+
+\bibitem{pw_derivatives_1998}
+Paul Wilmott.
+\newblock {\em Derivatives: the theory and practice of financial engineering}.
+\newblock John Wiley \& Sons Ltd, 1998.
+
+\bibitem{mg_nmof_2019}
+Manfred Gilli, Dietmar Maringer, and Enrico Schumann.
+\newblock {\em Numerical Methods and Optimization in Finance}.
+\newblock Academic Press, 2019.
+
+\bibitem{ja_bsderivation_1998}
+Jesper Andreasen, Bjarke Jensen, and Rolf Poulson.
+\newblock Eight valuation methods in financial mathematics: the black–scholes
+  formula as an example.
+\newblock {\em Mathematical Scientist}, 23:18--40, 1998.
+
+\bibitem{platen_numericalsde_1977}
+Peter~E. Kloeden and Eckhard Platen.
+\newblock Numerical solution of stochastic differential equations.
+\newblock 1977.
+
+\bibitem{gm_numericalsde_1994}
+G.~N. Milstein.
+\newblock Numerical integration of stochastic differential equations.
+\newblock 1994.
+
+\bibitem{dh_introsde_2001}
+Desmond~J. Higham.
+\newblock An algorithmic introduction to numerical simulation of stochastic
+  differential equations.
+\newblock {\em SIAM Review}, 43:525--546, 2001.
+
+\bibitem{hg_sdematlab_2006}
+Hagen Gilsing and Tony Shardlow.
+\newblock Sdelab: stochastic differential equations with matlab.
+\newblock 2006.
+
+\bibitem{sm_introsde_2010}
+Simon J.~A. Malham and Anke Wiese.
+\newblock An introduction to sde simulation.
+\newblock 2010.
+
+\bibitem{mb_numericalsde_2018}
+Mustafa Bayram, Tugcem Partal, and Gulsen~Orucova Buyukoz.
+\newblock Numerical methods for simulation of stochastic differential
+  equations.
+\newblock {\em Advances in Difference Equations}, 2018:1--10, 2018.
+
+\end{thebibliography}

@@ -1,0 +1,454 @@
+\section{Elementary stochastic calculus}
+\label{sec:stochastic_calculus}
+
+Main references: \cite{pw_iqf2ed_2007}
+
+\subsection{Introduction}
+\textbf{Stochastic calculus}\index{stochastic calculus} is very important in the mathematical modeling of financial processes because of the underlying random nature of financial markets. This section provides a brief introduction to elementary stochastic calculus. 
+
+This section will follow the methodology of chapter 5 of \cite{pw_iqf2ed_2007} in which technical terminologies are explained by examples relating to a \textbf{coin tossing}\index{coin tossing}, if possible, to make them intuitive. 
+
+\begin{center}
+\begin{footnotesize}
+\fbox{
+\begin{minipage}{0.90\textwidth}
+
+Toss a coin. Every time you throw a head I give you \$1, every time you throw a tail you give
+me \$1. If $R_i$ represents the random amount either \$1 or \$1 you make on the $i$-th toss then we have:
+\begin{equation}
+    E\left[ R_i \right] = 0, \quad E\left[ R_i^2 \right] = 1, \quad E\left[ R_i R_j \right] = 0
+\end{equation}
+These expectations are not conditional on the past; in other words, if I threw five heads in a row it does not affect the outcome of the sixth toss.
+
+Introduce $S_i$ to represent the total amount of money you have won up and including the $i$-th toss so that:
+\begin{equation}
+    S_i = \sum_{j = 1}^{i} R_j
+\end{equation}
+and assume that $S_0 = 0$, i.e. you start with no money. If we calculate the expectations of $S_i$ it does matter what information we have:
+\begin{equation}
+    E\left[ S_i \right] = 0, \quad E\left[ S_i^2 \right] = E\left[ R_1^2 + 2R_1R_2 + ... \right] = i
+\end{equation}
+On the other hand, if there are five tosses already, then the expectation of the sixth toss will depends on the fifth tosses. This is the conditional expectation. The expectation of $S_i$ conditional upon the previous five tosses gives:
+\begin{equation}
+    E \left[ S_6 | R_1, R_2, ..., R_5 \right] = S_5
+\end{equation}
+
+\end{minipage}
+}
+\end{footnotesize}
+\end{center}
+
+The property that the expected value of the random variable $S_i$ \textit{conditional upon all of the past events only depends on the previous value} $S_{i-1}$ (doesn't have to be the case that the expected value of $S_i$ is equal to $S_{i-1}$) is called \textbf{Markov property}\index{Markov property}. We say that the random walk has no memory beyond where it is now. Almost all of the financial models have the Markov property. This is of fundamental importance in modeling in finance.
+
+\begin{center}
+\begin{footnotesize}
+\fbox{
+\begin{minipage}{0.90\textwidth}
+
+After the fifth toss, you know how much money you have won. Your expected winnings after the sixth toss, and actually after any number of tosses if we keep playing, is just the amount you already hold.
+\begin{equation}
+    E \left[ S_i | R_j, j < i \right] = S_j
+\end{equation}
+
+\end{minipage}
+}
+\end{footnotesize}
+\end{center}
+
+The property that the conditional expectation of your winnings at any time in the future is just the amount you already hold is called the \textbf{martingale property}\index{martingale property}. This is another important property in finance.
+
+The \textbf{quadratic variation}\index{quadratic variation} of the random walk is defined as:
+\begin{equation}
+    \sum_{j = 1}^i \left( S_j - S_{j-1} \right)^2
+\end{equation}
+Going back to the coin tossing example, because you either win or lose an amount \$1 after each toss, we actually have $\left| S_j - S_{j-1} \right| = 1$, thus the quadratic variation is always $i$.
+
+The \textbf{mean square limit}\index{mean square limit} technique states that:
+\begin{equation}
+    E \left[ \left( \sum_{j=1}^n \left( X(t_j) - X(t_{j-1}) \right)^2 - t \right) \right] = O \left( \frac{1}{n} \right)
+\end{equation}
+as $n \rightarrow \infty$ this tends to zero. Therefore, we can say that:
+\begin{equation}
+    \sum_{j=1}^n \left( X(t_j) - X(t_{j-1}) \right)^2 = t
+\end{equation}
+in the `mean square limit'. This is often written as:
+\begin{equation}
+    \int_0^t (dX)^2 = t
+\end{equation}
+
+
+
+\subsection{Brownian motion}
+\begin{center}
+\begin{footnotesize}
+\fbox{
+\begin{minipage}{0.90\textwidth}
+
+Now we make some changes in the coin tossing game: first, the time allowed for tossing is a period $t$; second, within the period $t$ we will perform $n$ tosses with the bet size of each throw is $\sqrt{t/n}$. This new experiment clearly still possesses both the Markov and martingale properties, and its quadratic variation measured over the whole experiment is:
+\begin{equation}
+    \sum_{j = 1}^n \left( S_j - S_{j-1} \right)^2 = n \times \left( \sqrt{\frac{t}{n}} \right)^2 = t
+\end{equation}
+
+To speed up the game, we will make $n$ larger and larger, i.e. decreasing the time between tosses, with a smaller amount for each bet, i.e. still keep the bet size of $\sqrt{t/n}$. You will see that as we go to the limit $n = \infty$, the resulting random walk stays finite. It has an expectation conditional on a starting value of zero and a variance of $t$:
+\begin{align}
+    E \left[ S(t) \right] &= 0 \\
+    E \left[ S(t)^2 \right] &= t        
+\end{align}
+
+\end{minipage}
+}
+\end{footnotesize}
+\end{center}
+
+The limiting process for this random walk as the time steps go to zero is called \textbf{Brownian motion}\index{Brownian motion}, and it is denoted by $X(t)$. The important properties of Brownian motion, which are also very important for financial models, are as follows:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item \textbf{Finiteness}: any other scaling of the bet size or `increments' with time step would have resulted in either a random walk going to infinity in a finite time, or a limit in which there was no motion at all. It is important that the increment scales with the square root of the time step.
+    \item \textbf{Continuity}: the paths are continuous, there are no discontinuities. Brownian motion is the continuous-time limit of our discrete time random walk.
+    \item \textbf{Markov}: the conditional distribution of $X(t)$ given information up until $\tau < t$ depends only on $X(\tau)$.
+    \item \textbf{Martingale}: given information up until $\tau < t$ the conditional expectation of $X(t)$ is $X(\tau)$.
+    \item \textbf{Quadratic variation}: if we divide the time 0 to $t$ into $n+1$ partition points $t_i = it/n$ then:
+    \begin{equation}
+        \sum_{j = 1}^n \left( X \left( t_j \right) - X \left( t_{j-1} \right) \right)^2 \rightarrow t
+    \end{equation}
+    \item \textbf{Normality}: over finite time increments $t_{i-1}$ to $t_i$, $X \left( t_j \right) - X \left( t_{j-1} \right)$ is normally distributed with mean zero and variance $t_i - t_{i-1}$.
+\end{itemize}
+
+
+\subsection{Stochastic integration and differentiation}
+Introductory calculus courses teach differentiation first and integration second. The Itô calculus is derived and taught in the reverse order:
+first we need to understand the definition of an Itô (stochastic) integral, and then we can understand what it means for a stochastic process to have a differential.
+
+The construction of the Itô integral begins with the backward Riemann sum:
+\begin{equation}
+    W(t) = \int_0^t f(\tau) \; dX(\tau) = \lim_{n \rightarrow \infty} \sum_{j=1}^{n} f \left( t_{j-1} \right) \; \left( X \left( t_j \right) - X \left( t_{j-1} \right) \right)
+    \label{equ:itoo_001}
+\end{equation}
+with:
+\begin{equation}
+    t_j = \frac{jt}{n}
+\end{equation}
+The function $f(t)$ which is integrated is evaluated in the summation at the left-hand point $t_{j-1}$ which means each function evaluation does not know about the random increment that multiplies it, i.e. the integration is non \textbf{anticipatory}. This choice of integration is natural in finance, ensuring that we use no information about the future in our current actions.
+
+Taking the ``differentiating'' of the first equation of Equation \ref{equ:itoo_001} we have:
+\begin{equation}
+    dW = f(t) \; dX
+\end{equation}
+$dX$ can be considered as an an increment in $X$, i.e. a normal random variable with mean zero and standard deviation $\sqrt{dt}$. This equation looks like an ordinary differential equation but we do not make it identical to the ODE by dividing by $dt$ because then we have the difficult task of defining $\frac{dX}{dt}$.
+
+Pursuing this idea further, then the equation:
+\begin{equation}
+    dW = g(t) \; dt + f(t) \; dX
+\end{equation}
+is equivalent to:
+\begin{equation}
+    W(t) = \int_0^t g(\tau) \; d\tau + \int_0^t f(\tau) \; dX(\tau)
+    \label{equ:sde}
+\end{equation}
+Equations like \ref{equ:sde} are called \textbf{stochastic differential equations (SDE)}\index{stochastic differential equations} \index{SDE}. 
+
+
+
+\subsubsection{Itô's lemma}
+We know that in deterministic calculus if $F = X^2$ then $dF = 2X \; dX$. However this rule is not applicable in a stochastic environment. \textbf{Itô's lemma}, the most important rule of stochastic calculus, is used for this purpose since it allows us to manipulate functions of a random variable. This section provides the derivation of the Itô's lemma for an arbitrary function $F(X)$.
+
+First we introduce a very, very small time scale:
+\begin{equation}
+    \frac{\delta t}{n} = h
+\end{equation}
+This timescale is so small that the function $F(X(t+h))$ can be approximated by a Taylor series:
+\begin{equation}
+    F(X(t+h)) - F(X(t)) = (X(t+h) - X(t)) \; \frac{dF}{dX} (X(t)) + \frac{1}{2}(X(t+h) - X(t))^2 \; \frac{d^2F}{dX^2}(X(t))
+\end{equation}
+This can be followed as:
+\begin{align}
+    [F(X(t+h)) &- F(X(t))] + [F(X(t+2h)) - F(X(t+h))] + ... \nonumber \\
+    &+ [F(X(t+nh)) - F(X(t+(n-1)h))] \nonumber \\
+    &= \sum_{j=1}^n (X(t+jh) - X(t+(j-1))) \; \frac{dF}{dX} (X(t+(j-1)h)) \nonumber \\
+    &+ \frac{1}{2} \; \sum_{j=1}^n (X(t+jh) - X(t+(j-1)))^2 \; \frac{d^2F}{dX^2}(X(t))
+    \label{equ:itoo_002}
+\end{align}
+in which we use the approximation:
+\begin{equation}
+    \frac{d^2F}{dX^2}(X(t+(j-1)h)) = \frac{d^2F}{dX^2}(X(t))
+\end{equation}
+which is consistent with the order of accuracy we require here. 
+
+The first term in Equation \ref{equ:itoo_002} can be rewritten as:
+\begin{equation}
+    F(X(t+nh)) - F(X(t)) = F(X(t+\delta t)) - F(X(t))
+\end{equation}
+the second term is just the definition of a normal integral:
+\begin{equation}
+    \sum_{j=1}^n (X(t+jh) - X(t+(j-1))) \frac{dF}{dX} (X(t+(j-1)h)) = \int_t^{t+\delta t}\frac{dF}{dX}dX
+\end{equation}
+and the last term, following the mean square limit (this will be presented later), can be shortened into:
+\begin{equation}
+    \frac{1}{2} \sum_{j=1}^n (X(t+jh) - X(t+(j-1)))^2 \frac{d^2F}{dX^2}(X(t)) = \frac{1}{2} \; \frac{d^2F}{dX^2}(X(t)) \; \delta t
+\end{equation}
+Finally we have:
+\begin{equation}
+    F(X(t+\delta t)) - F(X(t)) = \int_t^{t+\delta t}\frac{dF}{dX}(X(\tau)) \; dX(\tau) + \frac{1}{2} \int_t^{t+\delta t}\frac{d^2F}{dX^2}(X(\tau)) \; d\tau
+\end{equation}
+Now we extend this result over longer timescale, $0 \rightarrow t$, to get:
+\begin{equation}
+    F(X(t)) = F(X(0)) + \int_0^t \frac{dF}{dX}(X(\tau)) \; dX(\tau) + \frac{1}{2} \int_0^t \frac{d^2F}{dX^2}(X(\tau)) \; d\tau
+\end{equation}
+This is the integral version of \textbf{Itô's lemma}\index{Itô's lemma} which is usually written as:
+\begin{equation}
+    dF = \frac{dF}{dX} dX + \frac{1}{2} \frac{d^2F}{dX^2} dt
+    \label{equ:itoo_003}
+\end{equation}
+
+Now if we look back at the naive Taylor series expansion of $F$, completely disregarding the random nature of $X$, and treating $dX$ as a small increment in $X$, we would get:
+\begin{equation}
+    F(X+dX) = F(X) + \frac{dF}{dX}dX + \frac{1}{2} \frac{d^2F}{dX^2}dX^2
+\end{equation}
+and if we consider $F(X+dX) - F(X)$ is just the change in $F$ we have:
+\begin{equation}
+    dF = \frac{dF}{dX}dX + \frac{1}{2} \frac{d^2F}{dX^2}dX^2
+\end{equation}
+This equation is very similar to Equation \ref{equ:itoo_003} (as Taylor series is very similar to Itô) with the only difference being that there is a $dX^2$ instead of a $dt$. However, following the mean square limit, we have:
+\begin{equation}
+    \int_0^t (dX)^2 = t
+\end{equation}
+we could write:
+\begin{equation}
+    dX^2 = dt
+\end{equation}
+This equation is technically incorrect, but using Taylor series with this ``rule of thumb'' in practice, we can get the right result. Besides, we shouldn't really think of $dX^2$ as being the square of a single normally distributed random variable, mean zero, variance $dt$. We should think of it as the sum of squares of lots and lots (an infinite number) of independent and identically distributed normal variables, each one having
+mean zero and a very, very small (infinitesimal) variance. When we add together lots of i.i.d. variables, we will get a quantity with a mean of $dt$ and a variance which goes rapidly to zero as the `lots' approach `infinity'. 
+
+\begin{center}
+\begin{footnotesize}
+\fbox{
+\begin{minipage}{0.90\textwidth}
+
+Now we can come back to the first example of this section, if $F=X^2$ then the stochastic differential equation of which $F$ satisfies is:
+\begin{equation}
+    dF = 2X \; dX + dt
+\end{equation}
+In an integrated form:
+\begin{equation}
+    X^2 = F(X) = F(0) + \int_0^t 2X \; dX + \int_0^t 1 d\tau = \int_0^t 2X \; dX + t
+\end{equation}
+therefore:
+\begin{equation}
+    \int_0^t X \; dX = \frac{1}{2} X^2 - \frac{1}{2} t
+\end{equation}
+
+\end{minipage}
+}
+\end{footnotesize}
+\end{center}
+
+To end this section, we consider the stochastic differential equation:
+\begin{equation}
+    dS = a(S) \; dt + b(S) \; dX
+\end{equation}
+for some functions $a(S)$ and $b(S)$, and $dX$ is the usual Brownian increment. Now if we have a function $V(S)$ of $S$, the stochastic differential equation applicable for $V$ is:
+\begin{equation}
+    dV = \frac{dV}{dS}dS + \frac{1}{2} b^2 \frac{d^2V}{dS^2}dt
+\end{equation}
+We can also further subtitute $dS$ into the above equation to get an equation for $dV$ in terms of the pure Brownian motion $X$:
+\begin{equation}
+    dV = \left( a(S)\frac{dV}{dS} + \frac{1}{2} b(S)^2 \frac{d^2V}{dS^2} \right) dt + b(S) \frac{dV}{dS} dX
+\end{equation}
+
+
+
+\subsubsection{Itô in higher dimensions}
+In financial problem, we often have functions of one stochastic variable $S$ and a deterministic variable $t$ (time) as $V(S,t)$. If:
+\begin{equation}
+    dS = a(S,t) \; dt + b(S,t) \; dX
+\end{equation}
+then the increment $dV$ is given by:
+\begin{equation}
+    dV = \frac{\partial V}{\partial t} dt + \frac{\partial V}{\partial S} dS + \frac{1}{2} b^2 \frac{\partial^2 V}{\partial S^2} dt
+\end{equation}
+This shorthand notation for the correct integrated from is written in the form of partial instead of ordinary derivatives.
+
+Occasionally, we have a function of two or more random variables, and time as well, i.e. $V(S_1,S_2,t)$. We will write the behaviour of $S_1$ and $S_2$ in the general form:
+\begin{align}
+    dS_1 &= a_1(S_1,S_2,t) \; dt + b_1(S_1,S_2,t) \; dX_1 \\
+    dS_2 &= a_2(S_1,S_2,t) \; dt + b_2(S_1,S_2,t) \; dX_2
+\end{align}
+in which we have two Brownian increment $dX_1$ and $dX_2$. We can think of these variables as being normally distributed with variance $dt$ but they are \textit{correlated}. The correlation between these two random variables is called $\rho$ which can also be a function of $S_1$, $S_2$ and $t$ but must satisfy:
+\begin{equation}
+    -1 \leq \rho \leq 1
+\end{equation} 
+The `rule of thumb' for this case can be:
+\begin{equation}
+    dX_1^2 = dt \quad dX_2^2 = dt \quad dX_1 dX_2 = \rho dt
+\end{equation}
+Then Itô's lemma becomes:
+\begin{equation}
+    dV = \frac{\partial V}{\partial t} dt + \frac{\partial V}{\partial S_1} dS_1 + \frac{\partial V}{\partial S_2} dS_2 + \frac{1}{2} b_1^2 \frac{\partial^2 V}{\partial S_1^2} dt + \frac{1}{2} b_2^2 \frac{\partial^2 V}{\partial S_2^2} dt + \rho b_1 b_2 \frac{\partial V}{\partial S_1 \partial S_2}
+\end{equation}
+
+
+
+\subsection{Some common random walks}
+In this section, a couple of common random walks will be presented. Recall that a stochastic differential equation model for variable $S$ has the general form:
+\begin{equation}
+    dS = \underline{\hspace{2cm}} dt + \underline{\hspace{2cm}} dX
+\end{equation}
+The part in front of the $dt$ is deterministic and the part in front of the $dX$ tells us how much randomness there is. Modelling is about choosing the functional form for the deterministic part and the functional form for the amount of randomness.
+
+
+\subsubsection{Brownian motion with drift}
+A Brownian motion with drift has the form:
+\begin{equation}
+    dS = \mu \; dt + \sigma \; dX
+\end{equation}
+The point to note about this model is that $S$ can go negative. This random walk would therefore not be a good model for many financial quantities, such as interest rates or equity prices. This stochastic differential equation can be integrated exactly to get"
+\begin{equation}
+    S(t) = S(0) + \mu \; t + \sigma \; (X(t) - X(0))
+\end{equation}
+
+
+
+\subsubsection{The lognormal random walk}
+The lognormal random walk is similar to the Brownian with drift but the drift and randomness scale with $S$:
+\begin{equation}
+    dS = \mu \; S \; dt + \sigma \; S \; dX
+\end{equation}
+With this model, if $S$ starts out positive, it can never go negative, the closer that $S$ gets to zero, the smaller the increments $dS$. The integral form of this stochastic differential equation follows from the stochastic differential equation for $F(S) = \log S$ (that's why it has the name ``lognormal''):
+\begin{equation}
+    S(t) = S(0) e^{\left( \mu - \frac{1}{2}\sigma^2 \right)t + \sigma \; (X(t) - X(0))}
+\end{equation}
+This stochastic differential equation is particularly important in the modelling of many asset classes. And if we have some function $V(S, t)$ then from Itô it follows that :
+\begin{equation}
+    dV = \frac{\partial V}{\partial t} \; dt + \frac{\partial V}{\partial S} \; dS + \frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} \; dt
+\end{equation}
+
+
+
+\subsubsection{A mean-reverting random walk}
+A typical mean-reverting random walk has the form:
+\begin{equation}
+    dS = (\nu - \mu S) \; dt + \sigma \; dX
+\end{equation}
+If $S$ is large, the negative coefficient in front of $dt$ means that $S$ will move down on average, if $S$ is small it rises on average. There is still no incentive for $S$ to stay positive in this random walk. Mean-reverting models are used for modeling a random variable that `isn't going anywhere'. That's why they are often used for interest rates, e.g. governmental bonds.
+
+
+
+\subsection{Summary}
+This section revisited the most important tool of the trade, Itô's lemma. If we think of $S$ as the value of an asset for which we have a stochastic differential equation, a `model', then we can handle functions of the asset, and ultimately value contracts such as options.
+
+If we use Itô as a tool we do not need to know why or how it works, only how to use it. Then, with use, familiarity breeds, if not contempt, sufficient confidence to make you believe that you understand. Some nice remarks on Itô's lemma given by Paul Wilmott \cite{pw_iqf2ed_2007} are presented here:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Stochastic differential equations are like recipes for generating random walks.
+    \item If you have some quantity, i.e. $S$, that follows a random walk, then any function of $S$ is also going to follow a random walk.
+    \item The answer for the question `What is the random walk for this function of S?' comes from applying something very like Taylor series but with some `rule of thumb':
+    \begin{itemize}
+    \setlength\itemsep{0em} 
+        \item When you do the Taylor series expansion, only keep terms of size $dt$ or bigger $dt^{1/2}$ ($dt^2 = 0$).
+        \item Every time you see a $dX^2$ term replace it with $dt$.
+        \item All terms with $dX \cdot dt$ varnishes, i.e. $dX \cdot dt = 0$ .
+    \end{itemize}
+\end{itemize}  
+
+Essentially all we require to successfully use the lemma is a rule of thumb, as explained in the text.
+
+
+
+\subsection{Exercises}
+This section represents some exercises from \cite{pw_iqf2ed_2007} to practice with stochastic calculus.
+
+
+\subsubsection{Problem}
+Given an Brownian motion $X(t)$, show that:
+\begin{equation}
+    \int_0^t X(\tau) \; dX(\tau) = \frac{1}{2} X^2(t) - \frac{1}{2}t
+    \nonumber
+\end{equation}
+
+\begin{equation}
+    \int_0^t \tau \; dX(\tau) = t \; X(t) - \int_0^t X(\tau) \; d\tau
+    \nonumber
+\end{equation}
+
+\begin{equation}
+    \int_0^t X^2(\tau) \; dX(\tau) = \frac{1}{3} X^3(t) - \int_0^t X(\tau) \; d\tau
+    \nonumber
+\end{equation}
+
+
+\subsubsection{Problem}
+Given a function $f(t)$ which is continuous and bounded on $[0,t]$, prove the integration by parts:
+\begin{equation}
+    \int_0^t f(\tau) \; dX(\tau) = f(t) \; X(t) - \int_0^t X(\tau) \; df(\tau)
+\end{equation}
+
+
+\subsubsection{Problem}
+Find $u(W,t)$ and $v(W,t)$ where:
+\begin{equation}
+    dW(t) = u \; dt + v \; dX(t)
+    \nonumber
+\end{equation}
+in three scenarios:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item $W(t) = X^2(t)$
+    \item $W(t) = e^{X(t)} + t + 1$
+    \item $W(t) = f(t) \; X(t)$
+\end{itemize} 
+and $f(t)$ is a bounded and continuous function.
+
+
+\subsubsection{Problem}
+If $S$ follows a lognormal random walk, use Itô's lemma to find the differential equations satisfied by:
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item $f(S) = aS + b$
+    \item $g(S) = S^n$
+    \item $h(S,t) = S^n \; e^{mt}$
+\end{itemize} 
+where $a, b, m, n$ are constants.
+
+
+\subsubsection{Problem}
+If:
+\begin{equation}
+    dS = \mu \; S \; dt + \sigma \; S \; dX
+    \nonumber
+\end{equation}
+use Itô's lemma to find the stochastic differential equation satisfied by $f(S) = \log(S)$.
+
+
+\subsubsection{Problem}
+The change in the share price satisfies:
+\begin{equation}
+    dS = A(S,t) \; dX + B(S,t) \; dt
+    \nonumber
+\end{equation}
+for some functions $A, B$, find the stochastic differential equation satisfied by $f(S,t)$.
+
+
+\subsubsection{Problem}
+Two shares follow geometric Brownian motions as:
+\begin{align*}
+    dS_1 &= \mu_1 \; S_1 \; dt + \sigma_1 \; S_1 \; dX_1 \\
+    dS_2 &= \mu_2 \; S_2 \; dt + \sigma_2 \; S_2 \; dX_2     
+\end{align*}
+The share price changes are correlated with correlation coefficient $\rho$, find the stochastic differential equation satisfied by a function $f(S_1,S_2)$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
