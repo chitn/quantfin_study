@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.25)  24 JUN 2020 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.25)  24 JUN 2020 13:41
 entering extended mode
 **./note.tex
 (note.tex
@@ -690,223 +690,53 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {C:/Users/210545/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(note.tocpdfTeX warning (ext4): destination with the same identifier (name{page
-.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.79 ... formul{\ae } and Greeks}{35}{section.B.4}
-                                                  % [1
-
-] [2])
+(note.toc)
 \tf@toc=\write5
 \openout5 = `note.toc'.
 
- [3]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.42 \chapter
+             {Introduction} [1
+
+]
 Chapter 1.
-(tex/brief_qf.tex [4
+(tex/math4fin.tex [2
 
 ]
 Appendix A.
-[5
+(tex/math4fin_prob.tex [3
 
-] [6] [7] [8] [9] [10] [11] [12]
-<figure/binomial_tree.png, id=696, 933.4875pt x 286.06876pt>
-File: figure/binomial_tree.png Graphic file (type png)
-<use figure/binomial_tree.png>
-Package pdftex.def Info: figure/binomial_tree.png  used on input line 380.
-(pdftex.def)             Requested size: 483.69687pt x 148.22842pt.
- [13] [14 <./figure/binomial_tree.png>]
-[15]) (tex/fin_basic_1.tex [16]
-Appendix B.
-(tex/fin_basic_1_random.tex
-<figure/daily_return_1.png, id=748, 923.45pt x 712.6625pt>
-File: figure/daily_return_1.png Graphic file (type png)
-<use figure/daily_return_1.png>
-Package pdftex.def Info: figure/daily_return_1.png  used on input line 43.
-(pdftex.def)             Requested size: 145.11053pt x 111.98395pt.
-<figure/daily_return_2.png, id=749, 882.29625pt x 712.6625pt>
-File: figure/daily_return_2.png Graphic file (type png)
-<use figure/daily_return_2.png>
-Package pdftex.def Info: figure/daily_return_2.png  used on input line 47.
-(pdftex.def)             Requested size: 145.11053pt x 117.20363pt.
-<figure/daily_return_3.png, id=750, 858.20625pt x 712.6625pt>
-File: figure/daily_return_3.png Graphic file (type png)
-<use figure/daily_return_3.png>
-Package pdftex.def Info: figure/daily_return_3.png  used on input line 51.
-(pdftex.def)             Requested size: 145.11053pt x 120.49855pt.
- [17
-
-] [18 <./figure/daily_return_1.png (PNG copy)> <./figure/daily_return_2.png (PN
-G copy)> <./figure/daily_return_3.png (PNG copy)>]
-<figure/random walk.png, id=780, 950.55125pt x 374.39874pt>
-File: figure/random walk.png Graphic file (type png)
-<use figure/random walk.png>
-Package pdftex.def Info: figure/random walk.png  used on input line 105.
-(pdftex.def)             Requested size: 483.69687pt x 190.51808pt.
- [19 <./figure/random walk.png>]) (tex/fin_basic_1_stocal.tex [20] [21]
-[22] [23] [24] [25] [26pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.B.2.68}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.418 \end{equation}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{equation.B.2.68}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.418 \end{equation}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{equation.B.2.68}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.418 \end{equation}
-                    ]pdfTeX warning (ext4): destination with the same identifie
-r (name{equation.B.2.69}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.424 \begin{equation}
-                      ) (tex/fin_basic_1_bsm.tex [27pdfTeX warning (ext4): dest
-ination with the same identifier (name{equation.B.2.69}) has been already used,
- duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.37 \end{equation}
-                   ] [28] [29pdfTeX warning (ext4): destination with the same i
-dentifier (name{equation.B.3.80}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.145     \end{equation}
-                        pdfTeX warning (ext4): destination with the same identi
-fier (name{equation.B.3.80}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.145     \end{equation}
-                        ] [30pdfTeX warning (ext4): destination with the same i
-dentifier (name{equation.B.3.80}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.193 \begin{equation}
-                      ] [31] [32] [33] [34] [35] [36] [37] [38pdfTeX warning (e
-xt4): destination with the same identifier (name{equation.B.4.146}) has been al
-ready used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.658 \end{equation}
-                    ] [39] [40] [41] [42] [43]
-<figure/mw_volatility.png, id=1182, 863.225pt x 572.1375pt>
-File: figure/mw_volatility.png Graphic file (type png)
-<use figure/mw_volatility.png>
-Package pdftex.def Info: figure/mw_volatility.png  used on input line 953.
-(pdftex.def)             Requested size: 195.89664pt x 129.83409pt.
-<figure/ew_volatility.png, id=1183, 823.075pt x 547.04375pt>
-File: figure/ew_volatility.png Graphic file (type png)
-<use figure/ew_volatility.png>
-Package pdftex.def Info: figure/ew_volatility.png  used on input line 957.
-(pdftex.def)             Requested size: 193.47578pt x 128.58868pt.
- [44 <./figure/mw_volatility.png (PNG copy)> <./figure/ew_volatility.png (PNG c
-opy)>] [45])
-(tex/fin_basic_1_binomial.tex [46] [47]
-<figure/binomial_math.png, id=1259, 702.625pt x 421.575pt>
-File: figure/binomial_math.png Graphic file (type png)
-<use figure/binomial_math.png>
-Package pdftex.def Info: figure/binomial_math.png  used on input line 131.
-(pdftex.def)             Requested size: 290.22107pt x 174.13983pt.
- [48]
-<figure/binomial_schematic.png, id=1278, 572.1375pt x 537.00626pt>
-File: figure/binomial_schematic.png Graphic file (type png)
-<use figure/binomial_schematic.png>
-Package pdftex.def Info: figure/binomial_schematic.png  used on input line 141.
-
-(pdftex.def)             Requested size: 193.47578pt x 181.59642pt.
-<figure/binomial_counting.png, id=1279, 622.325pt x 537.00626pt>
-File: figure/binomial_counting.png Graphic file (type png)
-<use figure/binomial_counting.png>
-Package pdftex.def Info: figure/binomial_counting.png  used on input line 145.
-(pdftex.def)             Requested size: 193.47578pt x 166.95366pt.
- [49 <./figure/binomial_math.png (PNG copy)> <./figure/binomial_schematic.png (
-PNG copy)> <./figure/binomial_counting.png (PNG copy)>] [50]
-<figure/uv=1.png, id=1307, 642.4pt x 451.6875pt>
-File: figure/uv=1.png Graphic file (type png)
-<use figure/uv=1.png>
-Package pdftex.def Info: figure/uv=1.png  used on input line 248.
-(pdftex.def)             Requested size: 217.66211pt x 153.04102pt.
-<figure/p=05.png, id=1308, 642.4pt x 451.6875pt>
-File: figure/p=05.png Graphic file (type png)
-<use figure/p=05.png>
-Package pdftex.def Info: figure/p=05.png  used on input line 252.
-(pdftex.def)             Requested size: 217.66211pt x 153.04102pt.
- [51 <./figure/uv=1.png (PNG copy)> <./figure/p=05.png (PNG copy)>]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 331.
- [52]
-<figure/binomial_model_euam_put_025.png, id=1370, 729.72626pt x 485.815pt>
-File: figure/binomial_model_euam_put_025.png Graphic file (type png)
-<use figure/binomial_model_euam_put_025.png>
-Package pdftex.def Info: figure/binomial_model_euam_put_025.png  used on input 
-line 363.
-(pdftex.def)             Requested size: 217.66211pt x 144.90796pt.
-<figure/binomial_model_euam_put_100.png, id=1371, 729.72626pt x 485.815pt>
-File: figure/binomial_model_euam_put_100.png Graphic file (type png)
-<use figure/binomial_model_euam_put_100.png>
-Package pdftex.def Info: figure/binomial_model_euam_put_100.png  used on input 
-line 367.
-(pdftex.def)             Requested size: 217.66211pt x 144.90796pt.
- [53 <./figure/binomial_model_euam_put_025.png> <./figure/binomial_model_euam_p
-ut_100.png>]) (tex/fin_basic_1_gbm.tex)) (tex/fin_basic_2.tex [54]
-Appendix C.
-) (tex/fin_basic_3.tex [55
-
-]
-Appendix D.
-[56
-
-] [57]) (tex/fin_inter.tex [58]
-Appendix E.
-) (tex/fin_adv.tex [59
-
-]
-Appendix F.
-) (tex/math4fin.tex [60
-
-]
-Appendix G.
-(tex/math4fin_prob.tex [61
-
-] [62]) (tex/math4fin_stoch.tex [63])
-(tex/math4fin_stat.tex) (tex/math4fin_nume.tex [64] [65] [66pdfTeX warning (ext
-4): destination with the same identifier (name{equation.G.4.12}) has been alrea
-dy used, duplicate ignored
+] [4]) (tex/math4fin_stoch.tex [5])
+(tex/math4fin_stat.tex) (tex/math4fin_nume.tex [6] [7] [8pdfTeX warning (ext4):
+ destination with the same identifier (name{equation.A.4.12}) has been already 
+used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.148 \end{center}
                   pdfTeX warning (ext4): destination with the same identifier (
-name{equation.G.4.12}) has been already used, duplicate ignored
+name{equation.A.4.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.148 \end{center}
                   pdfTeX warning (ext4): destination with the same identifier (
-name{equation.G.4.12}) has been already used, duplicate ignored
+name{equation.A.4.12}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.148 \end{center}
-                  ] [67pdfTeX warning (ext4): destination with the same identif
-ier (name{equation.G.4.14}) has been already used, duplicate ignored
+                  ] [9pdfTeX warning (ext4): destination with the same identifi
+er (name{equation.A.4.14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.205 \end{equation}
-                    ] [68pdfTeX warning (ext4): destination with the same ident
-ifier (name{equation.G.4.17}) has been already used, duplicate ignored
+                    ] [10pdfTeX warning (ext4): destination with the same ident
+ifier (name{equation.A.4.17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -931,41 +761,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--310
 
  []
 
-[69]
-<figure/riemann_left.png, id=1564, 433.62pt x 216.81pt>
+[11]
+<figure/riemann_left.png, id=325, 433.62pt x 216.81pt>
 File: figure/riemann_left.png Graphic file (type png)
 <use figure/riemann_left.png>
 Package pdftex.def Info: figure/riemann_left.png  used on input line 335.
 (pdftex.def)             Requested size: 217.66211pt x 108.83148pt.
-<figure/riemann_right.png, id=1565, 433.62pt x 216.81pt>
+<figure/riemann_right.png, id=327, 433.62pt x 216.81pt>
 File: figure/riemann_right.png Graphic file (type png)
 <use figure/riemann_right.png>
 Package pdftex.def Info: figure/riemann_right.png  used on input line 339.
 (pdftex.def)             Requested size: 217.66211pt x 108.83148pt.
-<figure/riemann_mid.png, id=1566, 433.62pt x 216.81pt>
+<figure/riemann_mid.png, id=328, 433.62pt x 216.81pt>
 File: figure/riemann_mid.png Graphic file (type png)
 <use figure/riemann_mid.png>
 Package pdftex.def Info: figure/riemann_mid.png  used on input line 343.
 (pdftex.def)             Requested size: 217.66211pt x 108.83148pt.
-<figure/riemann_trap.png, id=1567, 433.62pt x 216.81pt>
+<figure/riemann_trap.png, id=329, 433.62pt x 216.81pt>
 File: figure/riemann_trap.png Graphic file (type png)
 <use figure/riemann_trap.png>
 Package pdftex.def Info: figure/riemann_trap.png  used on input line 347.
 (pdftex.def)             Requested size: 217.66211pt x 108.83148pt.
- [70 <./figure/riemann_left.png> <./figure/riemann_right.png> <./figure/riemann
-_mid.png> <./figure/riemann_trap.png>] [71] [72]
-<figure/monte_carlo_inte.png, id=1628, 462.528pt x 346.896pt>
+ [12 <./figure/riemann_left.png> <./figure/riemann_right.png> <./figure/riemann
+_mid.png> <./figure/riemann_trap.png>] [13] [14]
+<figure/monte_carlo_inte.png, id=392, 462.528pt x 346.896pt>
 File: figure/monte_carlo_inte.png Graphic file (type png)
 <use figure/monte_carlo_inte.png>
 Package pdftex.def Info: figure/monte_carlo_inte.png  used on input line 487.
 (pdftex.def)             Requested size: 362.77264pt x 272.09163pt.
- [73 <./figure/monte_carlo_inte.png>] [74] [75]
-<figure/derivative.png, id=1699, 505.89pt x 361.35pt>
+ [15 <./figure/monte_carlo_inte.png>] [16] [17]
+<figure/derivative.png, id=464, 505.89pt x 361.35pt>
 File: figure/derivative.png Graphic file (type png)
 <use figure/derivative.png>
 Package pdftex.def Info: figure/derivative.png  used on input line 629.
 (pdftex.def)             Requested size: 362.77264pt x 259.1297pt.
- [76 <./figure/derivative.png>]
+ [18 <./figure/derivative.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 662--664
 
  []
@@ -980,7 +810,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 698--701
 
  []
 
-[77]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 708--710
 
  []
@@ -996,16 +826,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 733--736
 
  []
 
-) (tex/math4fin_fdm.tex [78]) (tex/math4fin_opt.tex)) [79]
+) (tex/math4fin_fdm.tex [20]) (tex/math4fin_opt.tex)) [21]
 runsystem(makeindex note.idx)...executed (allowed).
 
- (note.ind [80
+ (note.ind) (note.bbl [22
 
 
 ])
-(note.bbl [81])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 61.
- [82
+ [23
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
@@ -1013,48 +842,43 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 61.
 Package rerunfilecheck Info: File `note.out' has not changed.
-(rerunfilecheck)             Checksum: A085494D256F1259084C5BEFCA84BB1B;7735.
+(rerunfilecheck)             Checksum: AB5CEDF406F8E7EF23CBF47C535D00EC;2271.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 13681 strings out of 480934
- 210214 string characters out of 2909679
- 516159 words of memory out of 3000000
- 28412 multiletter control sequences out of 15000+200000
- 544847 words of font info for 68 fonts, out of 3000000 for 9000
+ 12792 strings out of 480934
+ 195236 string characters out of 2909679
+ 513449 words of memory out of 3000000
+ 28162 multiletter control sequences out of 15000+200000
+ 543924 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,21n,100p,1159b,725s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,21n,100p,1015b,725s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\210545\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\tcrm0900.pk> <C:\Users\210545\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\tcrm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmm
-i9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmtt9.pfb>
-Output written on note.pdf (83 pages, 1460741 bytes).
+\tcrm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cmextra/cmex9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on note.pdf (24 pages, 547636 bytes).
 PDF statistics:
- 2023 PDF objects out of 2073 (max. 8388607)
- 821 named destinations out of 1000 (max. 500000)
- 957 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 647 PDF objects out of 1000 (max. 8388607)
+ 231 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

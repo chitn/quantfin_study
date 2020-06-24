@@ -296,7 +296,7 @@ where $E$ is the exercise price (strike). For a call, we find that:
 
 
 \subsubsection{Implementation}
-The implementation is quite straight-forward for the European-style exercise. First, we build a tree of possible asset prices; then find the values of the option at expiry using the \textbf{payoff\_function}; finally, calculate the present values of the expected values of the option price under a risk-neutral random walk from expiry back until the present. The algorithm is presented below for the asset price $Asset$, the strike value $E$, the interest rate $r$, the volatility $\sigma$, the expiry $T$ and the number of time step $N$. The code can be found \href{https://github.com/chitn/quantfin_study/blob/master/binomial_model-paul_wilmott.py}{here}. 
+The implementation is quite straight-forward for the European-style exercise. First, we build a tree of possible asset prices; then find the values of the option at expiry using the \textbf{payoff\_function}; finally, calculate the present values of the expected values of the option price under a risk-neutral random walk from expiry back until the present. The algorithm is presented below for the asset price $Asset$, the strike value $E$, the interest rate $r$, the volatility $\sigma$, the expiry $T$ and the number of time step $N$. The code can be found \href{https://github.com/chitn/quantfin_study/blob/master/code/binomial_model.py}{here}. 
 
 \vspace{\baselineskip}
 \begin{algorithm}[H]

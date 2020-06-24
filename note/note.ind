@@ -1,194 +1,27 @@
 \begin{theindex}
 
-  \item American option, 10
-  \item arbitrage profits, 5
-  \item at the money, 9
+  \item cdf, 4
+  \item cumulative distribution function, 4
 
   \indexspace
 
-  \item backwardation, 8
-  \item basket, 5
-  \item Bermudan option, 10
-  \item binary option, 10
-  \item binomial tree, 13
-  \item Brownian motion, 21
+  \item density, 4
 
   \indexspace
 
-  \item call option, 9
-  \item cash settlement, 8
-  \item cdf, 62
-  \item clearing houses, 9
-  \item closeout, 8
-  \item coin tossing, 20
-  \item commodity, 8
-  \item compound, 6
-  \item Consumer Price Index, 7
-  \item contango, 8
-  \item contingent claim, 9
-  \item continuously compounded, 6
-  \item convertible bond, 11
-  \item cum-dividend, 5
-  \item cumulative distribution function, 62
+  \item expected value, 4
 
   \indexspace
 
-  \item delivery date, 7
-  \item delivery price, 7
-  \item Delta-hedging, 12
-  \item density, 62
-  \item derivatives, 9
-  \item digital option, 10
-  \item discretely compounded, 6
-  \item dividends, 5
-  \item drift rate, 18
+  \item normal random variable, 4
 
   \indexspace
 
-  \item equity, 5
-  \item European option, 10
-  \item ex-dividend, 5
-  \item exchange, 10
-  \item exchange rate, 5
-  \item exercise price, 9
-  \item expected return, 18
-  \item expected value, 62
-  \item expiration date, 9
-  \item expiry, 9
+  \item pdf, 4
+  \item probability density function, 4
 
   \indexspace
 
-  \item final condition, 29
-  \item fixed periodic interest payment, 6
-  \item fixed-income security, 6
-  \item floating interest payment, 6
-  \item foreign exchange, 5
-  \item Forex, 5
-  \item forward contract, 7
-  \item future value, 6
-  \item futures contract, 7
-  \item FX, 5
-
-  \indexspace
-
-  \item gearing, 10
-  \item going short, 7
-  \item growth rate, 18
-
-  \indexspace
-
-  \item Heaviside function, 30
-  \item hedging, 10
-
-  \indexspace
-
-  \item in the money, 9
-  \item index, 5
-  \item index-linked bond, 7
-  \item indices, 5
-  \item initial condition, 29
-  \item initial margin, 8
-  \item interest, 6
-  \item interest rate swaps, 6
-  \item intrinsic value, 9
-  \item Itô's lemma, 23
-
-  \indexspace
-
-  \item Jensen's inequality, 15
-
-  \indexspace
-
-  \item leverage, 10
-  \item long position, 9
-
-  \indexspace
-
-  \item maintenance margin, 8
-  \item margin account, 8
-  \item market price, 12
-  \item marking to market, 8
-  \item Markov property, 20
-  \item martingale property, 21
-  \item maturity, 7
-  \item mean square limit, 21
-
-  \indexspace
-
-  \item no arbitrage, 12
-  \item no-arbitrage, 7
-  \item normal random variable, 62
-
-  \indexspace
-
-  \item option, 9
-  \item OTC, 10
-  \item out of the money, 9
-  \item over the counter, 10
-  \item over-the-counter, OTC, 11
-
-  \indexspace
-
-  \item parameters, 10
-  \item payoff diagram, 9
-  \item payoff function, 9
-  \item pdf, 62
-  \item physical delivery, 8
-  \item premium, 8
-  \item present value, 6
-  \item principal at maturity, 6
-  \item probability density function, 62
-  \item profit diagram, 9
-  \item put option, 9
-  \item put-call parity, 11
-
-  \indexspace
-
-  \item quadratic variation, 21
-
-  \indexspace
-
-  \item random walk, 18
-  \item real world, 12
-  \item Retail Price Index, 7
-  \item risk-free portfolio, 12
-  \item risk-neutral expectation, 13
-  \item risk-neutral probability, 13
-  \item risk-neutral world, 12
-
-  \indexspace
-
-  \item SDE, 22
-  \item share, 5
-  \item short position, 9
-  \item spot price, 7
-  \item standard random variable, 62
-  \item stochastic calculus, 20
-  \item stochastic differential equations, 22
-  \item stock, 5
-  \item stock-split, 5
-  \item strike price, 9
-
-  \indexspace
-
-  \item theoretical price, 12
-  \item time value, 9
-  \item time value of money, 6
-
-  \indexspace
-
-  \item underlying asset, 8, 9
-
-  \indexspace
-
-  \item vanilla, 10
-  \item variable-income security, 6
-  \item variables, 10
-  \item volatility, 10, 18
-
-  \indexspace
-
-  \item warrant, 11
-  \item writer, 9
+  \item standard random variable, 4
 
 \end{theindex}
