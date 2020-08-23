@@ -1,29 +1,220 @@
 \section{Finite difference method}
 \subsection{Introduction}
-Illustration with the heat or diffusion equation having the form:
-\begin{equation}
-    \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x}
-\end{equation}
-where $u$ is the temperature, $x$ is a spatial coordinate and $t$ is time. Physical meaning of this equation is as follows: (1) consider the flow into and out of a small section of the bar; (2) the flow of heat along the bar is proportional to the spatial gradient of the temperature, hence the derivative of this, the second derivative of the temperature (right-hand side), is the heat retained by the small section; (3) this retained heat causes a change in the temperature (left-hand side).
+In numerical analysis, \href{https://en.wikipedia.org/wiki/Finite_difference_method}{finite-difference methods}\index{finite-difference methods} (FDM)\index{FDM} are discretizations used for solving (ordinary-ODE or partial-PDE) differential equations by approximating them with difference equations in which the derivatives are discretely approximated by finite differences; in this context, the word ``discrete'' means that the numerical solution is known at a finite number of points in the physical domain. The discrete approximation results in a system of equations that can be solved by matrix algebra techniques for the values of the discrete unknowns.
 
+In this section, FDM will be illustrated by solving the heat diffusion equation in one-dimensional space having the form:
+\begin{equation}
+    \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2}
+    \nonumber
+\end{equation}
+where $u$ is the temperature, $x$ is a spatial coordinate and $t$ is time. The diffusion coefficient $k$ determines how fast $u$ changes in time, it can be a constant or a function of $(x,t)$. Physical meaning of this equation is as follows: (1) consider the flow into and out of a small section of the bar; (2) the flow of heat in the bar is proportional to the spatial gradient of the temperature, hence the derivative of this, the second derivative of the temperature (right-hand side), is the heat retained by the small section; (3) this retained heat causes a change in the temperature (left-hand side).
+
+This equation can be modified to model the reaction-diffusion systems by adding a reaction term on the right-hand side as follows:
+\begin{equation}
+    \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} + \alpha u
+    \nonumber
+\end{equation}
+in which $\alpha$ defines the reaction rate. 
+
+
+
+\subsection{Constant coefficients}
+The one-dimensional reaction-diffusion equation \index{heat diffusion equation} is defined as:
+\begin{equation}
+    \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x} + \alpha u \quad x \in [0;L] \quad t \in [0;T] 
+    \label{equ:heat_1D}
+\end{equation}
+with the following Dirichlet boundary conditions (BCs) at $x=0$ and $x=L$ and the initial condition defined at time $t=0$:
+\begin{align*}
+	u(0,t) &= l(t) \quad u(L,t) = r(t) \\
+	u(x,0) &= u_0(x) 
+\end{align*}
+Other boundary conditions, e.g. gradient conditions (Neumann BCs) or mixed conditions, can also be specified. 
+
+The first step in solving Equation \ref{equ:heat_1D} is discretization the space-time domain $[0;L] \times [0;T]$ by a set of mesh points. Here we apply equally spaced mesh points for simplicity, although they can be non-equally spaced, with the space distance and the time step are as follows:
+\begin{align*}
+	\Delta x &= \frac{L}{N_x} \quad N_x \text{: number of interval of the spatial domain, i.e. number of elements} \\
+	\Delta t &= \frac{T}{N_t} \quad N_t \text{: number of interval of the temporal domain, i.e. number of time steps} 
+\end{align*}
+
+The next step is then calculating the value of $u(x,t)$ at each mesh point following finite difference approximations. Depending on the method of approximations, there are three main approaches:
 \begin{itemize}
 	\setlength\itemsep{0em}
-    \item Local truncation error
-    \item Numerical stability
+	\item \href{https://en.wikipedia.org/wiki/FTCS_scheme}{Explicit scheme} (e.g. FTCS)
+	\item Implicit scheme (e.g. BTCS)
+	\item \href{https://en.wikipedia.org/wiki/Crank-Nicolson_method}{Crank-Nicholson scheme}
 \end{itemize}
 
 
+\subsubsection{Explicit scheme}
+Following the explicit scheme\index{explicit scheme}, the time first derivative is approximate with a forward difference at time $t_n$ whereas the spatial second derivative is approximated with a central difference at point $x_i$:
+\begin{align}
+	\frac{\partial u}{\partial t} &= \frac{u^{n+1} - u^{n}}{\Delta t} + O(\Delta t) \\
+	\frac{\partial^2 u}{\partial x^2} &= \frac{u^{n}_{i-1} - 2*u^{n}_{i} + u^{n}_{i+1}}{\Delta x^2} + O(\Delta x^2)	
+\end{align}
+Substitution of these two equations into Equation \ref{equ:heat_1D}, removing the truncation temporal and spatial error terms and rearranging to get:
+\begin{equation}
+	u^{n+1}_i = r u^{n}_{i+1} + (1-2r+s) u^{n}_{i} + r u^{n}_{i-1}
+	\label{equ:1d_ftcs}
+\end{equation}
+in which $r = k \Delta t / \Delta x^2$ and $s = \Delta t \alpha$. Equation \ref{equ:1d_ftcs} is called \textit{Forward Time Centered Space}\index{Forward Time Centered Space} or FTCS\index{FTCS} approximation. It is easy to implement without invoking linear algebra. However, stable solutions with the FTCS scheme requires:
+\begin{equation}
+	r = k \frac{\Delta t}{\Delta x^2} < \frac{1}{2}
+\end{equation}
+This limitation may make requires a really small mesh size or small time step if the heat conductivity is large. It should be noted that the FTCS solution is first-order accurate in time and second-order accurate in space.
 
-\subsection{Explicit}
+Equation can also be expressed in a matrix multiplication form as follows:
+\begin{equation}
+	u^{n+1} = \mathbf{A} u^{n}
+\end{equation}
+where $\mathbf{A}$ is a tridiagonal matrix of size $[N_x \times N_x]$:
+\begin{equation}
+A = 
+\begin{bmatrix}
+	1 & 0    & 0      & 0      & 0      & 0 \\
+	r & 1-2r & r      & 0      & 0      & 0 \\
+	0 & r    & 1-2r   & r      & 0      & 0 \\
+	0 & 0    & \ddots & \ddots & \ddots & 0 \\
+	0 & 0    & 0      & r      & 1-2r   & r \\
+	0 & 0    & 0      & 0      & 0      & 1
+\end{bmatrix}
+\end{equation}
+The first and last row of $A$ is adjusted so that the boundary values of $u$ are not changed when the matrix-vector product is computed. 
+
+
+\subsubsection{Implicit scheme}
+In the implicit scheme, the time derivative follows a backward difference rule whereas the spatial derivative still follows a central difference rule:
+\begin{align}
+	\frac{\partial u}{\partial t} &= \frac{u^{n} - u^{n-1}}{\Delta t} + O(\Delta t) \\
+	\frac{\partial^2 u}{\partial x^2} &= \frac{u^{n}_{i-1} - 2*u^{n}_{i} + u^{n}_{i+1}}{\Delta x^2} + O(\Delta x^2)	
+\end{align}
+which leads to the recurrent equation (after removing the truncation error terms):
+\begin{equation}
+	-\frac{k}{\Delta x^2} u^{n}_{i-1} + \left( \frac{1}{\Delta t} + \frac{2k}{\Delta x^2} \right) u^{n}_{i} - \frac{k}{\Delta x^2} u^{n}_{i+1} = \frac{1}{\Delta t} u^{n-1}_{i}
+	\nonumber
+\end{equation}
+or:
+\begin{equation}
+	-r u^{n}_{i-1} + \left( 1 + 2r \right) u^{n}_{i} - r u^{n}_{i+1} = u^{n-1}_{i}
+	\label{equ:1d_btcs}
+\end{equation}
+Equation \ref{equ:1d_btcs} is called \textit{Backward Time Centered Space}\index{Backward Time Centered Space} or BTCS\index{BTCS} approximation. Since $u^{n}_{i}$ depends also on $u^{n}_{i-1}$ and $u^{n}_{i+1}$, Equation \ref{equ:1d_btcs} must be solved in a matrix multiplication form $\mathbf{A} \mathbf{u}^{n} = \mathbf{u}^{n-1}$ as follows:
+\begin{equation}
+\underbrace{
+\begin{bmatrix}
+	b_1 & c_1 & 0      & 0         & 0         & 0         \\
+	a_2 & b_2 & c_2    & 0         & 0         & 0         \\
+	0   & a_3 & b_3    & c_3       & 0         & 0         \\
+	0   & 0   & \ddots & \ddots    & \ddots    & 0         \\
+	0   & 0   & 0      & a_{N_x-1} & b_{N_x-1} & c_{N_x-1} \\
+	0   & 0   & 0      & 0         & 0         & 1
+\end{bmatrix}}_{\mathbf{A}} 
+\underbrace{
+\begin{bmatrix}
+	u^n_1       \\
+	u^n_2       \\
+	u^n_3       \\
+	\vdots      \\
+	u^n_{N_x-1} \\
+	u^n_{N_x}   
+\end{bmatrix}}_{\mathbf{u}^{n}} = 
+\underbrace{
+\begin{bmatrix}
+	d_1       \\
+	d_2       \\
+	d_3       \\
+	\vdots    \\
+	d_{N_x-1} \\
+	d_{N_x}   
+\end{bmatrix}}_{\mathbf{u}^{n-1}}
+\label{equ:1d_btcs_matrix}
+\end{equation}
+where the coefficients are defined by:
+%\begin{alignat*}{4}
+%	& a_i  &&= -\frac{k}{\Delta x^2}  && \quad \quad b_i  &&= \frac{1}{\Delta t} + \frac{2k}{\Delta x^2}  \\
+%	& c_i  &&= -\frac{k}{\Delta x^2}  && \quad \quad d_i  &&= \frac{1}{\Delta t} u^{n-1}_i  
+%\end{alignat*}
+\begin{equation}
+	a_i = -r \quad \quad b_i = 1+2r \quad \quad c_i = -r \quad \quad d_i = u^{n-1}_i	
+	\nonumber
+\end{equation}
+For the Dirichlet boundary conditions we have to impose:
+\begin{alignat*}{6}
+	& b_1     &&= 1  && \quad \quad c_1     &&= 0  && \quad \quad d_1     &&= u_0  \\
+	& a_{N_x} &&= 0  && \quad \quad b_{N_x} &&= 1  && \quad \quad d_{N_x} &&= u_L	
+\end{alignat*}
+The BTCS scheme, although is just as accurate as the FTCS scheme, has one huge advantage over the FTCS scheme on the sense that it is unconditionally stable (for the solution of the heat equation). Therefore, it is robust to the choices of $\Delta t$ and $\Delta x$.
+
+
+
+\subsubsection{Crank-Nicolson scheme}
+Both the FTCS and BTCS schemes have a temporal truncation error of $O(\Delta t)$. When time-accurate solutions are important, the Crank-Nicholson\index{Crank-Nicholson} scheme has a significant advantages. The left-hand-side\index{left-hand-side} (LHS)\index{LHS} of Equation \ref{equ:heat_1D} is still approximated with the backward time difference used in the BTCS scheme; the right-hand-side\index{right-hand-side} (RHS)\index{RHS} is, however, approximated with the average of the central difference evaluated at the current and the previous time step which results in an equation:
+\begin{equation}
+	\frac{u^{n} - u^{n-1}}{\Delta t} = \frac{k}{2} \left[ \frac{u^{n}_{i-1} - 2*u^{n}_{i} + u^{n}_{i+1}}{\Delta x^2} + \frac{u^{n-1}_{i-1} - 2*u^{n-1}_{i} + u^{n-1}_{i+1}}{\Delta x^2} \right]
+\end{equation}
+Rearrange this equation so that values of $u$ at different time steps (i.e. unknown and known terms) stay in different sides of the equation to get:
+\begin{align}
+	-\frac{k}{2\Delta x^2} u^{n}_{i-1} &+ \left( \frac{1}{\Delta t} + \frac{k}{\Delta x^2} \right) u^{n}_{i} - \frac{k}{2\Delta x^2} u^{n}_{i+1} \nonumber \\
+	&= \frac{k}{2\Delta x^2} u^{n-1}_{i-1} + \left( \frac{1}{\Delta t} - \frac{k}{\Delta x^2} \right) u^{n-1}_{i} + \frac{k}{2\Delta x^2} u^{n-1}_{i+1} \nonumber
+\end{align}
+or:
+\begin{equation}
+	-r u^{n}_{i-1} + \left( 2+2r \right) u^{n}_{i} - r u^{n}_{i+1} =
+     r u^{n-1}_{i-1} + \left( 2-2r \right) u^{n-1}_{i} + r u^{n-1}_{i+1}
+     \label{equ:1d_cn}
+\end{equation}
+Similar to the BTCS scheme, the Equation \ref{equ:1d_cn} of the Crank-Nicholson scheme has to solve in a linear algebraic manner. Both the LHS and RHS of Equation \ref{equ:1d_cn} can be expressed as a product of $\mathbf{A} \mathbf{u}$ as in Equation \ref{equ:1d_btcs_matrix}, only the coefficients are different:
+\begin{itemize}
+	\item for the LHS:
+	\begin{equation}
+		a_i = -r \quad \quad b_i = 1+2r \quad \quad c_i = -r
+		\nonumber
+	\end{equation}
+	\item for the RHS:
+	\begin{equation}
+		a_i = r \quad \quad b_i = 1-2r \quad \quad c_i = r 
+		\nonumber
+	\end{equation}
+\end{itemize} 
+
+
+
+\subsubsection{Measuring truncation error}
+When an analytical solution is known, it is possible to compare the numerical solution with the exact solution by calculating the error:
+\begin{equation}
+	E(N_x, N_t) = \frac{1}{\sqrt{N_x}} \| u^{n}_i - u(u(x_i, t_n)) \|_2
+\end{equation}
+
+The local error at $x=x_i$ and $t=t_n$ is defined as:
+\begin{equation}
+	e^{n}_i = u^n_i - u(x_i, t_n)
+\end{equation}
+Let $\bar{e}^{n}$ be a root-mean-square average error per node at time step $t_n$:
+\begin{equation}
+	\bar{e}^{n} = \left[ \frac{1}{N_x} \sum_{i=1}^{N_x} \left( e^{n}_i \right)^2 \right]
+\end{equation}
+It can be shown that $E(N_x, N_t) = \bar{e}^{n}$.
+
+
+
+\subsubsection{Example}
 Not yet...
 
 
 
-\subsection{Implicit}
+\subsection{Variable coefficients}
 Not yet...
 
 
 
-\subsection{Crank-Nicolson}
-Not yet...
+
+
+
+
+
+
+
+
+
+
 
